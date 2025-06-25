@@ -7,8 +7,8 @@ model = BertForSequenceClassification.from_pretrained(model_name)
 
 classifier = pipeline("sentiment-analysis", model=model, tokenizer=tokenizer)
 
-review_movie = "是近年来最值得一看的国产佳作，强烈推荐！"
-review_food = "食物完全凉了，吃起来像隔夜饭，体验极差。"
+review_movie = "这部电影太精彩了，节奏紧凑，毫无冷场，完全沉浸其中！"
+review_food = "这家店口味稳定，已经回购好几次了，值得信赖！"
 
 result_movie = classifier(review_movie)[0]
 result_food = classifier(review_food)[0]
