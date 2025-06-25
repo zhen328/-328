@@ -7,7 +7,7 @@ model_name = "uer/gpt2-chinese-cluecorpussmall"
 tokenizer = BertTokenizer.from_pretrained("uer/gpt2-chinese-cluecorpussmall")
 model = GPT2LMHeadModel.from_pretrained(model_name)
 
-prompt = "当我醒来，发现自己变成了一本书"
+prompt = "如果我拥有一台时间机器"
 inputs = tokenizer(prompt, return_tensors="pt")
 
 # 生成文本
